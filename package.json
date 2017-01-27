@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/mrbob89/node-todo-api#readme",
   "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
     "mongodb": "^2.2.22",
     "mongoose": "^4.7.8"
   }
