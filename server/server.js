@@ -94,6 +94,20 @@ app.patch('/todos/:id', (req, res) => {
     });
 });
 
+// User
+
+app.post('/users', (req, res) => {
+    var body = _.pick(req.body, ['email', 'password']);
+    var user = new User(body);
+
+    user.save().then((user) => {
+        res.send(user);
+    }, (e) => {
+        res.status(400).send(e);
+    });
+});
+
+
 app.listen(3000, () => {
     console.log('Started on port 3000');
 });
